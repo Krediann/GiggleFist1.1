@@ -5,16 +5,16 @@ import java.util.concurrent.TimeUnit;
 
 public class Combat {
     static Random random = new Random();
-    private final static Scanner yes = new Scanner(System.in);
+    public final static Scanner yes = new Scanner(System.in);
 
     static String rivi = "";
 
     public static void main(String[] args) throws FileNotFoundException, InterruptedException{
         C1();
     }
-    private static void C1() throws FileNotFoundException, InterruptedException{
+    public static void C1() throws FileNotFoundException, InterruptedException{
         try {
-            final Scanner t3luk = new Scanner(new File("../../pictures/combat1.txt"));
+            final Scanner t3luk = new Scanner(new File("./textfiles/combat1.txt"));
             while (t3luk.hasNext()) {
                 rivi = t3luk.nextLine();
                 TimeUnit.SECONDS.sleep(1);
@@ -27,11 +27,10 @@ public class Combat {
         }
         while (Stats.DrunkPatronHP > 0) {
             System.out.println("Press a to attack or any other character to wait");
-            char Hit = yes.next().trim().charAt(0);
+            String Hit = yes.nextLine();
             int HitChance = random.nextInt(4);
 
-            switch(Hit) {
-                case 'a':
+            if(Hit.equalsIgnoreCase("a")) {
                     if (HitChance == 0) {
                         System.out.println("Your Attack missed!");
                         System.out.println("");
@@ -42,9 +41,9 @@ public class Combat {
                         System.out.println("Drunk Patron's HP:" + Stats.DrunkPatronHP);
                         System.out.println("");
                     }
-                    break;
-                default:
-                    System.out.println("You chose not to attack..");
+            }
+            else {
+                System.out.println("You chose not to attack..");
             }
             if (Stats.DrunkPatronHP > 0) {
                 System.out.println("The Drunk Patron throws a Punch");
@@ -63,7 +62,7 @@ public class Combat {
                 }
             }
 
-            if (Stats.DrunkPatronHP >= 0) {
+            if (Stats.DrunkPatronHP == 0) {
                 System.out.println("You knocked out the Drunk Patron!");
                 System.out.println("");
                 TimeUnit.SECONDS.sleep(1);
