@@ -1,0 +1,9 @@
+You look down the road and you hear a person in weird looking clothing walk down at you, he stops you and tells you she's an artiste.
+The Artiste looks you up and down and tells you he's heard of the mighty Gigglefist's adventures and asks you where you're going next.
+Despite how odd she looks and how he just knows you with a glance, you decide to tell him you're on your way to the Kobold's Cavern.
+
+He let's out a brief haughty laughter (Even though you know you didn't say anything funny). Her expression goes back to a deadpan, until he looks at you amused:
+Artiste:"Oh that is the objective of this life? So be it, will you accept my boon?"
+
+Type 'A' to accept
+Type 'D' to decline

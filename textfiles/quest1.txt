@@ -1,0 +1,18 @@
+
+Bob briefs you on the Kobold's alleged location:
+A cavern some ways off to the north of the town.
+The road leading there has been a favourite ambush spot with brigands lately
+and Bob reminds you with a fatherly tone "Keep your wits about you".
+
+
+You gather your belongings and step out of the Wick's End and notice a merchant on the other side of the road, walking up, you notice that the merchant has good wares for an adventurer like you:
+[A]: Claw-weapons for your fist (increases your ATK by 3).
+[B]: Healing Herbs (Increases your HP by 5).
+[C]: an Authentic Stradivarius (This beautiful hand-crafted instrument is sure to be helpful in one way or another.)
+
+Looking through your coinpurse you realise that you only have the coin for one of these items, which one do you choose?
+
+Press A for Claw-weapons
+Press B for Healing Herbs
+Press C for an Authentic Stradivarius
+Press N for nothing

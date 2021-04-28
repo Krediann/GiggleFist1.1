@@ -1,0 +1,10 @@
+You find a roadside merchant with a lot of cheap goods, some helpful, some maybe not so much:
+[A]: a Teddybear (Sure, this makes you feel better, offers no stats).
+[B]: a Strengthening potion (You don't feel that different, ATK +1).
+[C]: a Healing shroom (You are fairly sure that's just psychedelics, but guess it toughens up your mind, HP +2)
+[D]: a Hearthstone
+
+Type A to buy the Teddybear
+Type B to buy the Strenghtening potion
+Type C to buy the Healing shroom
+Type D to buy the Hearthstone
