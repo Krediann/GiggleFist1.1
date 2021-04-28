@@ -62,7 +62,7 @@ public class Combat {
                     System.out.println("");
                 }
             }
-            //baaritappelija kuolee ja lvl up attack nousee
+
             if (Stats.DrunkPatronHP >= 0) {
                 System.out.println("You knocked out the Drunk Patron!");
                 System.out.println("");
@@ -72,12 +72,12 @@ public class Combat {
                 System.out.println("");
                 Stats.PlayerATK++;
             }
-            //jos pelaaja kuolee peli loppuu käytännössä
+
             if (Stats.PlayerHP == 0) {
                 System.out.println("You got knocked out and robbed!");
                 TimeUnit.SECONDS.sleep(1);
                 System.out.println("Thanks for playing. Get rekt NOOB");
-                Death = true;
+                Death.Death = true;
                 break;
             }
         }

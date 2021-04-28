@@ -2,6 +2,8 @@ package GiggleFist;
 import javax.swing.*;
 
 public class Death {
+
+    public static boolean Death = false;
     public static void Death() {
         JFrame frame = new JFrame();
         ImageIcon icon = new ImageIcon("../../pictures/youdied.jpg");
