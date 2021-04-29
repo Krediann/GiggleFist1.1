@@ -8,6 +8,16 @@ public class Main {
         if (Death.Death == true) {
             Death.Death();
         }
+        if (Death.Death == false) {
+            Middle();
+
+            if (Death.Death == true) {
+                Death.Death();
+            }
+            if (Death.Death == false) {
+                Ending();
+            }
+        }
     }
 
     public static void Start() throws FileNotFoundException, InterruptedException{
@@ -21,5 +31,20 @@ public class Main {
         Questions.InsultOrHelp();
     }
 
+    public static void Middle() throws FileNotFoundException, InterruptedException {
+        //More story, quest info + merchant
+        Storybeats.QuestInfo();
+
+        //merchant interaction
+        Merchant.FirstMerchant();
+
+        //The journey events
+        Journey.Journey();
+    }
+
+    public static void Ending() throws FileNotFoundException, InterruptedException {
+        //Ending to the story
+        Storybeats.Ending();
+    }
 
 }

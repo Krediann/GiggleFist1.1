@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 public class Questions {
     public final static Scanner yes = new Scanner(System.in);
 
-
     public static void WhatName() throws InterruptedException {
         boolean oikeanimi = false;
         String RealName = "GiggleFist";
@@ -19,7 +18,6 @@ public class Questions {
             System.out.println("Bob: So, I know you're an adventurer...");
             oikeanimi = true;
         }
-
         while (oikeanimi == false) {
             System.out.println("Didn't your mama tell you to be polite GiggleFist. What is your real name?");
             vastaus=yes.nextLine();
@@ -32,7 +30,6 @@ public class Questions {
             }
         }
     }
-
     public static void InsultOrHelp () throws FileNotFoundException, InterruptedException{
         String IorH = yes.nextLine();
 
