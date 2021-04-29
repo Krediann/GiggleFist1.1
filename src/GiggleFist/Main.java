@@ -5,5 +5,8 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, InterruptedException{
         Combat.C1();
+        if (Death.Death == true) {
+            Death.Death();
+        }
     }
 }

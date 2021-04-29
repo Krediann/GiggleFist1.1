@@ -9,10 +9,9 @@ public class Combat {
 
     static String rivi = "";
 
-    public static void main(String[] args) throws FileNotFoundException, InterruptedException{
-        C1();
-    }
+    //Bar fight combat
     public static void C1() throws FileNotFoundException, InterruptedException{
+        //Reading the text file for starting the combat
         try {
             final Scanner t3luk = new Scanner(new File("./textfiles/combat1.txt"));
             while (t3luk.hasNext()) {
@@ -25,11 +24,13 @@ public class Combat {
         catch (FileNotFoundException e) {
             System.out.println("An error occurred!!!" + e);
         }
+        // While Drunk Patron has hp left the combat will continue
         while (Stats.DrunkPatronHP > 0) {
             System.out.println("Press a to attack or any other character to wait");
             String Hit = yes.nextLine();
-            int HitChance = random.nextInt(4);
 
+            //Making the hit chance 75% chance to hit
+            int HitChance = random.nextInt(4);
             if(Hit.equalsIgnoreCase("a")) {
                     if (HitChance == 0) {
                         System.out.println("Your Attack missed!");
@@ -42,13 +43,16 @@ public class Combat {
                         System.out.println("");
                     }
             }
+            // If player doesn't press a, chooses not to attack
             else {
                 System.out.println("You chose not to attack..");
             }
+            // If Drunk Patron has HP left, he will attack
             if (Stats.DrunkPatronHP > 0) {
                 System.out.println("The Drunk Patron throws a Punch");
-                int DoesItHitB = random.nextInt(2);
 
+                //Making Drunk Patron hit chance 50%
+                int DoesItHitB = random.nextInt(2);
                 if (DoesItHitB == 0) {
                     System.out.println("You dodged");
                     System.out.println("");
@@ -61,7 +65,7 @@ public class Combat {
                     System.out.println("");
                 }
             }
-
+            //Winning the fight, get +1 to ATK
             if (Stats.DrunkPatronHP == 0) {
                 System.out.println("You knocked out the Drunk Patron!");
                 System.out.println("");
@@ -71,7 +75,7 @@ public class Combat {
                 System.out.println("");
                 Stats.PlayerATK++;
             }
-
+            //Losing the fight, dies
             if (Stats.PlayerHP == 0) {
                 System.out.println("You got knocked out and robbed!");
                 TimeUnit.SECONDS.sleep(1);
