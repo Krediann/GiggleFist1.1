@@ -1,8 +1,12 @@
 package GiggleFist;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 public class Items {
-
+    public final static Scanner yes = new Scanner(System.in);
     //Does the player have the item
     public static boolean Fiddle = false;
     public static boolean EnchantedFiddle = false;
@@ -17,7 +21,7 @@ public class Items {
             TimeUnit.SECONDS.sleep(1);
         }
         catch (InterruptedException e) {
-            System.out.println("Tapahtui virhe" +e);
+            System.out.println("An error occurred" +e);
         }
         System.out.println("The Merchant congratulates you on your purchase. You scurry off to the Northern road.");
         System.out.println("");
@@ -30,7 +34,7 @@ public class Items {
             TimeUnit.SECONDS.sleep(1);
         }
         catch (InterruptedException e) {
-            System.out.println("Tapahtui virhe" +e);
+            System.out.println("An error occurred" +e);
         }
         System.out.println("The Merchant congratulates you on your purchase. You scurry off to the Northern road.");
         System.out.println("");
@@ -43,10 +47,49 @@ public class Items {
             TimeUnit.SECONDS.sleep(1);
         }
         catch (InterruptedException e) {
-            System.out.println("Tapahtui virhe" +e);
+            System.out.println("An error occurred" +e);
         }
         System.out.println("The Merchant congratulates you on your purchase. You scurry off to the Northern road.");
         System.out.println("");
         Fiddle = true;
+    }
+
+    public static void teddybear() throws FileNotFoundException, InterruptedException {
+        String rivi = "";
+        System.out.println("A fine choice, do you want to name it?");
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        }
+        catch (InterruptedException e) {
+            System.out.println("An error occurred" +e);
+        }
+        try {
+            PrintWriter Writer = new PrintWriter("./textfiles/nalle.txt");
+            System.out.println("Give a name to the teddybear!:");
+            rivi = yes.nextLine();
+            Writer.println(rivi);
+            Writer.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("An error occurred" + e);
+        }
+        System.out.println("You feel a bit better!");
+        System.out.println("");
+        TeddyBear = true;
+    }
+
+    public static void StrengthPotion() {
+        System.out.println("You don't feel that different!");
+        Stats.PlayerATK++;
+    }
+
+    public static void HealingShroom() {
+        System.out.println("You are fairly sure that's just psychedelics, but guess it toughens up your mind!");
+        Stats.PlayerHP = Stats.PlayerHP + 2;
+    }
+
+    public static void HearthStone() {
+        System.out.println("Merchant: This will take you back to Bob very quickly");
+        Hearthstone = true;
     }
 }

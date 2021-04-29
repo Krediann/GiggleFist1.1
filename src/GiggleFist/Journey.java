@@ -15,7 +15,7 @@ public class Journey {
         }
         //Second merchant interaction
         else if (mitatapahtuu == 1) {
-            Events.Merchant2();
+            Merchant.Merchant2();
         }
         // Nothing happens
         else if (mitatapahtuu == 2) {
@@ -23,15 +23,15 @@ public class Journey {
         }
         // Meeting the Artiste
         else if (mitatapahtuu == 3) {
-            artiste();
+            Events.Artiste();
         }
         //Talking to the God
         else if (mitatapahtuu == 4) {
-            god();
+            Events.God();
         }
         //Dueling a devil with a fiddle
         else if (mitatapahtuu == 5) {
-            devilsduel();
+            Events.DevilsDuel();
         }
     }
 

@@ -1,5 +1,6 @@
 package GiggleFist;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Merchant {
@@ -25,6 +26,28 @@ public class Merchant {
                     System.out.println("The Merchant seems to look a little less happy, but none the less wishes you well. You scurry off to the Northern road.");
                     System.out.println("");
                 }
+            }
+        }
+    }
+
+    public static void Merchant2() throws FileNotFoundException, InterruptedException {
+        String purchase = yes.nextLine();
+        while (!"a".equalsIgnoreCase(purchase) && !"b".equalsIgnoreCase(purchase) && !"c".equalsIgnoreCase(purchase) && !"d".equalsIgnoreCase(purchase)) {
+            System.out.println("You wrote a wrong character... Try again...");
+            purchase = yes.nextLine();
+        }
+        if (purchase.equalsIgnoreCase("a") || purchase.equalsIgnoreCase("b") || purchase.equalsIgnoreCase("c") || purchase.equalsIgnoreCase("d")) {
+            if (purchase.equalsIgnoreCase("a")) {
+                Items.teddybear();
+            }
+            else if (purchase.equalsIgnoreCase("b")) {
+                Items.StrengthPotion();
+            }
+            else if (purchase.equalsIgnoreCase("c")) {
+                Items.HealingShroom();
+            }
+            else if (purchase.equalsIgnoreCase("d")) {
+                Items.HearthStone();
             }
         }
     }

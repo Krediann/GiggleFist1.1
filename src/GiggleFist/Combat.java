@@ -85,7 +85,6 @@ public class Combat {
             }
         }
     }
-
     public static void AmbushCombat() throws InterruptedException {
         while (Stats.BrigandHP > 0) {
             System.out.println("Press a to attack or any other character to wait");
@@ -100,7 +99,7 @@ public class Combat {
                 }
                 else if (DoesItHit < 3) {
                     System.out.println("The brigand slices you with his axe!");
-                    Stats.PlayerHP = Stats.PlayerHP - Stats.PlayerATK;
+                    Stats.PlayerHP = Stats.PlayerHP - Stats.BrigandATK;
                     System.out.println("You have " + Stats.PlayerHP + "HP left");
                     System.out.println("");
                 }

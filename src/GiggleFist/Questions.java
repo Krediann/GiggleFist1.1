@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Questions {
     public final static Scanner yes = new Scanner(System.in);
-
+    static Random random = new Random();
     public static void WhatName() throws InterruptedException {
         boolean oikeanimi = false;
         String RealName = "GiggleFist";
@@ -30,6 +30,7 @@ public class Questions {
             }
         }
     }
+
     public static void InsultOrHelp () throws FileNotFoundException, InterruptedException{
         String IorH = yes.nextLine();
 
@@ -46,4 +47,36 @@ public class Questions {
             }
         }
     }
+
+    public static void ArtisteAccept() {
+        System.out.println("You feel yourself getting lighter.");
+        System.out.println("Artiste:There you go darling, now be quick or be dead, time is of the essence.");
+        System.out.println("");
+        Stats.PlayerATK = Stats.PlayerATK + 10;
+    }
+
+    public static void DevilsDuelAccept() {
+        System.out.println("You brace yourself in your confidence and you say:");
+        System.out.println("My name is GiggleFist and it might be a sin, but I'll take your bet, you're gonna regret 'cause I'm the best there's ever been");
+        System.out.println("");
+
+        int DevilDuel = random.nextInt(2);
+        if (DevilDuel == 0) {
+            System.out.println("Devil laughs a jovial laughter.");
+            System.out.println("");
+            System.out.println("Devil: Good show, good show, but you know how this song and dance has to end.");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+
+            System.out.println("YOUR SOUL IS MINE!");
+            Death.Death();
+        }
+        else if (DevilDuel == 1) {
+            System.out.println("Devil: How could this be?! Oh well, I am a devil of my word, god forbid I break a deal.");
+            Items.EnchantedFiddle = true;
+        }
+    }
+
+
 }
